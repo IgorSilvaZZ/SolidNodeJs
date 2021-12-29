@@ -4,16 +4,26 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "nodemailer": "^6.7.2",
+    "sqlite3": "^5.0.2",
+    "typeorm": "^0.2.41",
     "uuidv4": "^6.2.12"
   },
   "scripts": {
-    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts"
+    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "typeorm": "tsnd node_modules/typeorm/cli.js",
+    "test": "set NODE_ENV=test&&jest -i"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.3",
     "@types/nodemailer": "^6.4.4",
+    "@types/supertest": "^2.0.11",
+    "jest": "^27.4.5",
+    "supertest": "^6.1.6",
+    "ts-jest": "^27.1.2",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.4"
   }

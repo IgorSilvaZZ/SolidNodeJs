@@ -1,4 +1,7 @@
 import express from "express";
+import createConnection from "./database";
+
+createConnection();
 
 import { router } from "./routes";
 
